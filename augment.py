@@ -40,20 +40,6 @@ def augment_images():
 
     print('finished augmenting data. Generated', new_data_count, 'new images')
 
-def deaugment_images():
-    pattern = re.compile(r"^\d+\.jpg$")
-    count = 0
-    for country in os.listdir(data_path):
-        country_path = os.path.join(data_path, country)
-        for img in os.listdir(country_path):
-            if pattern.match(img):
-                file_path = os.path.join(country_path, img)
-                if os.path.isfile(file_path):
-                    # print(file_path)
-                    os.remove(file_path)
-                    count += 1
-    print('finished deaugmenting data. Deleted', count, 'files')
-
 def main():
     args = sys.argv[1:]
     if len(args) == 0:
