@@ -40,19 +40,4 @@ def augment_images():
 
     print('finished augmenting data. Generated', new_data_count, 'new images')
 
-def main():
-    args = sys.argv[1:]
-    if len(args) == 0:
-         print('NO ARGUMENTS GIVEN. GIVE ARG \'augment\' TO AUGMENT THE DATASET AND \'deaugment\' TO DE-AUGMENT THE DATASET')
-         return
-    
-    if args[0] == 'augment':
-        print('augmenting the dataset... (this may take a few seconds)')
-        augment_images()
-    elif args[0] == 'deaugment':
-        print('de-augmenting the dataset... (this may take a few seconds)')
-        deaugment_images()
-    else:
-        print('INCORRECT ARGUMENTS GIVEN. GIVE ARG \'augment\' TO AUGMENT THE DATASET AND \'deaugment\' TO DE-AUGMENT THE DATASET')
-
-main()
+augment_images()
