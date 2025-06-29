@@ -1,6 +1,5 @@
 # GeoGuesser AI Bot
 
-**Authors:** Luka Zukhbaia, Nikoloz Topuridze & Nika Koghuashvili
 
 ## Project Overview
 
